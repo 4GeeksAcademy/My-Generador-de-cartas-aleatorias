@@ -29,21 +29,39 @@
           >
             Nueva Card
           </button>
+          <button
+            type="button"
+            class="btn btn-outline-light text-center justify-content-center"
+            id="btn-change"
+          >
+            Cambiar Tamaño
+          </button>
           <p class="text-white p-3" id="reloj"></p>
+        </div>
+
+        <div class="container text-center p-3">
+          <input type="text" placeholder="cambiar alto" id="alto" />
+          <input type="text" placeholder="cambiar ancho" id="ancho" />
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div
+          class="container d-flex text-center justify-content-center p-3 align-items-center"
+          id="contenedor"
+        >
           <div
-            class="card text-center border-black border-3 rounded-4 shadow-lg"
+            class="card text-center border-black border-3 rounded-4 shadow-lg "
             id="tarjeta"
+            style="width: 200px; height: 250px;"
           >
             <div
               class="card-header text-start fs-3 bg-white border-white rounded-4"
             >
               <div id="palocab"></div>
             </div>
-            <div class="card-body fw-bold fs-1">
+            <div
+              class="card-body fw-bold fs-1 d-flex text-center justify-content-center align-items-center"
+            >
               <div id="numero"></div>
               <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>

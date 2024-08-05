@@ -41,3 +41,20 @@ function generarRandom() {
   valorpalofoot.textContent = palo[palorandom];
   valorpalofoot.style.color = color;
 }
+
+function cambiarDimension() {
+  let valoraltura = document.getElementById("alto").value;
+  let valorancho = document.getElementById("ancho").value;
+  let dimension = document.getElementById("tarjeta");
+  dimension.style.height = valoraltura + "px";
+  dimension.style.width = valorancho + "px";
+  let valorpalohead = document.getElementById("palocab");
+  valorpalohead.style.fontSize = valoraltura / 10 + "px";
+  let valornumero = document.getElementById("numero");
+  valornumero.style.fontSize = valoraltura / 10 + "px";
+  let valorpalofoot = document.getElementById("palopie");
+  valorpalofoot.style.fontSize = valoraltura / 10 + "px";
+}
+
+let botoncambiar = document.getElementById("btn-change");
+botoncambiar.addEventListener("click", cambiarDimension);
