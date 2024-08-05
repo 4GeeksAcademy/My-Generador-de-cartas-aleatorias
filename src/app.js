@@ -1,12 +1,3 @@
-/* eslint-disable */
-// import "bootstrap";
-// import "./style.css";
-
-const { Button } = require("bootstrap");
-
-// import "./assets/img/rigo-baby.jpg";
-// import "./assets/img/4geeks.ico";
-
 let palo = ["♦", "♥", "♠", "♣"];
 let valor = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 let color = "";
@@ -32,11 +23,21 @@ window.onload = function() {
   valorpalofoot.style.color = color;
 };
 
+let contador = 11;
+
 let boton = document.getElementById("btn-random");
 boton.addEventListener("click", window.onload);
+boton.addEventListener("click", resetContador);
 
-// let contador = 11;
-// let secundero = setInterval(function() {
-//   contador--;
-//   document.getElementById("reloj").textContent = contador;
-// }, 1000); // Actualiza cada segundo (1000 ms)
+let secundero = setInterval(function() {
+  contador--;
+  document.getElementById("reloj").textContent = contador;
+  if (contador === 0) {
+    contador = 11;
+    window.onload();
+  }
+}, 1000); // Actualiza cada segundo (1000 ms)
+
+function resetContador() {
+  contador = 11;
+}
